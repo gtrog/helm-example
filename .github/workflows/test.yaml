@@ -3,7 +3,8 @@ name: Test matrix + env
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
-  label: test
+  push:
+    branches: [ "master" ]
 
 jobs:
   # This workflow contains a single job called "build"
