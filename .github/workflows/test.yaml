@@ -14,8 +14,8 @@ jobs:
     strategy:
       matrix:
         value: ["foo", "bar"]
+    env:
+      VALUE: ${{ matrix.value }}
     steps:
     - name: Run a one-line script
       run: echo Value $VALUE
-      env:
-        VALUE: ${{ matrix.value }}
